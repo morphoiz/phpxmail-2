@@ -8,7 +8,7 @@ The original sources from Vlad Alexa have been ported to PHP7.
 
 ## Installation 
 
-See INSTALL.TXT file.
+See [install.txt](https://github.com/morphoiz/phpxmail-2/blob/master/install.txt) file.
 
 ## Licensing
 
