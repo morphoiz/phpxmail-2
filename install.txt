@@ -1,0 +1,95 @@
+#############################################################################
+#                                                                           #
+#                            PHPXmail INSTALL                               #
+#                                                                           #
+#############################################################################
+
+---                           REQUIREMENTS:                               ---
+
+PHP 4.3.x or later	 www.php.net
+XMail server 1.21 or later www.xmailserver.org
+
+                              - - - - - - -
+
+You must have an Xmail server that is correctly running and the host server 
+must have the port 6017 free for Xmail remote control access (if your system
+just use this port, read the 'readme' file coming with Xmail documentation 
+to learn how to change that port). 
+Be sure NOT TO BE an 'Open relay' for the spammers:
+
+	- the SERVER.TAB file of Xmail server contain the setting variable 
+	  "EnableAuthSMTP-POP3": it must be uncommented and set to "1";
+	
+	- the SMTPRELAY.TAB file of Xmail server must not contain the line
+	  "0.0.0.0"<tab>"0.0.0.0"
+	  
+                              - - - - - - -
+
+================================
+CLEAN INSTALL:
+Install of the PHPXmail web interface is very simple: in the almost all of
+the cases you just need to unzip to htdocs and browse to it, then you should 
+enter the server setting; you are so ready to add domains, users, mailing 
+lists... and experience with your Xmail server.
+
+We suggest, however, to read carefully all the parts of this document 
+(including the troubleshooting section).
+
+To get the maximum from PHPXmail the suggestions are:
+- start Xmail server with all the 'log options' enabled: you may enable them
+  from the command line that start Xmail server (see 'readme' file at the
+  relative section).
+  
+- insert a true local network IP address in the server settings of PHPXmail
+  (the local host value 127.0.0.1 is deprecated: use it only if you experience
+  troubles with your system or if you are directly connected to the internet
+  and do not have a local network).
+
+- immediatly define the 'user defaults' in 'server config' menu and define 
+  'IP maps' security access policies before to create a domain and to add 
+  users.
+  
+                              - - - - - - -
+
+================================
+UPGRADING FROM PREVIOUS VERSION:
+Delete all files but SERVERS.PHP under the root directory of PHPXmail, then
+unzip the package to the same directory and browse to it: you are just ready
+to continue your experience with your Xmail server.
+
+                              - - - - - - -
+
+---                           TROUBLESHOOTING:                            ---
+
+================================
+--- PHP Xmail
+Consult the official support forum of PHPXmail at the PHPXmail section of
+  http://www.nextcode.org/forums
+
+General issues:
+  CANNOT LOGIN  (due to an initial wrong server info settings): 
+  - close the browser
+  - delete the server.php file under the root directory of PHPXmail
+  - reopen the browser on the main PHPXmail page adding the correct server
+    settings.
+
+
+================================
+--- PHP 
+PHP.INI must contain:
+session.use_cookies=yes
+
+
+================================
+--- Xmail
+in the CTRLACCOUNTS.TAB do not use an e-mail address for PHPXmail access: use
+instead something like 'rootadmin ' or so on (DO NOT USE the @ symbol inside).
+
+
+================================
+--- FEDORA users
+Be sure that 'SELinux' is disabled
+
+
+
+Written by Marco Riccardi

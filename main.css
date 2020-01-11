@@ -1,0 +1,147 @@
+body.menu {
+	background-color:	#357cb9;
+	font-family:	Verdana, Tahoma, sans-serif;
+	font-size:	10px;
+	margin:	0px;
+}
+.menulink {
+	font-size:	11px;
+	font-weight:	bold;
+	text-decoration:	none;
+	color:	#ffffff;
+	border-left:	#78AEDA 1px solid;
+	border-top:	#78AEDA 1px solid;
+	border-right:	#000066 1px solid;
+	border-bottom:	#000066 1px solid;
+	padding:	3px;
+}
+
+body {
+	font-family:	Verdana, Tahoma, sans-serif;
+	font-size:	9pt;
+	margin:	0px;
+	background-color:	#ffffff;
+}
+
+a, a:visited {
+	color:	#ff9900;
+}
+
+td {
+	font-family:	Verdana, Tahoma, sans-serif;
+	font-size:	9pt;
+}
+
+td.ico {
+	width:	16px;
+}
+
+th {
+	text-align:	left;
+	font-family:	Verdana, Tahoma, sans-serif;
+	font-size:	9pt;
+	border : 2px; 
+	background-color: #E4E4E4;
+	border-left:	#757575 1px solid;
+	border-top:	#757575 1px solid;
+	border-right:	#999999 1px solid;
+	border-bottom:	#999999 1px solid;
+}
+
+.tbl {
+	cellspacing:	0px;
+	cellpading:	0px;
+}
+
+form {
+	display:	inline;
+}
+h1 {
+	color:	#000000;
+	font-size:	16pt;
+}
+
+.caption {
+	color:	#357CB9;
+	font-size:	11pt;
+	font-weight:	bold;
+}
+
+.content {
+	margin:	10px;
+}
+hr{
+	border-top:	#CCCCCC 1px dashed;
+	border-bottom:	#999999 1px dashed;
+}
+input {
+	font-family:	Verdana, Tahoma, sans-serif;
+	font-size:	9pt;
+	border : 2px; 
+	background-color: #E4E4E4;
+	border-left:	#757575 1px solid;
+	border-top:	#757575 1px solid;
+	border-right:	#999999 1px solid;
+	border-bottom:	#999999 1px solid;
+}
+
+select {
+	font-family:	Verdana, Tahoma, sans-serif;
+	font-size:	9pt;
+	width:	200px;
+	border : 2px; 
+	background-color: #E4E4E4;
+	border-left:	#757575 1px solid;
+	border-top:	#757575 1px solid;
+	border-right:	#999999 1px solid;
+	border-bottom:	#999999 1px solid;
+}
+button {
+	border : 2px; 
+	background-color: #E4E4E4;
+	border-left:	#757575 1px solid;
+	border-top:	#757575 1px solid;
+	border-right:	#999999 1px solid;
+	border-bottom:	#999999 1px solid;
+}
+textarea {
+	font-family:	Courier, Verdana, Tahoma, sans-serif;
+	font-size:	10px;
+	border : 2px; 
+	background-color: #E4E4E4;
+	border-left:	#757575 1px solid;
+	border-top:	#757575 1px solid;
+	border-right:	#999999 1px solid;
+	border-bottom:	#999999 1px solid;
+}
+.transparent {
+    BORDER-RIGHT: medium none;
+    BORDER-TOP: medium none;
+    BORDER-LEFT: medium none;
+    BORDER-BOTTOM: medium none;
+    HEIGHT: 16px;
+    BACKGROUND-COLOR: transparent;
+}
+TD SELECT {
+    WIDTH: 100pt
+}
+TD INPUT {
+	font-family:	Verdana, Tahoma, sans-serif;
+	font-size:	9pt;
+	border : 2px; 
+	background-color: #E4E4E4;
+	border-left:	#757575 1px solid;
+	border-top:	#757575 1px solid;
+	border-right:	#999999 1px solid;
+	border-bottom:	#999999 1px solid;
+    HEIGHT: 20px;
+}
+
+.log {
+	font-size:		8pt;
+	cellspacing:	0px;
+	padding-left: 	2pt;
+	padding-right: 	2pt; 
+	padding-top: 	0pt; 
+	padding-bottom: 0pt; 
+}

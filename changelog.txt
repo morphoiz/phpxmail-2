@@ -1,0 +1,156 @@
+1.5
+2007-06-09
+fixed a bug: on some systems it needs to login twice... - (below_zero)
+fixed a bug: solved a problem with IE7 - (dsion)
+fixed a bug: "Strange behaviour of update link" it does not always correctly detect the "Updated version" - (filip1258, below_zero)
+fixed a bug: Xmail report all mails as spam when PHPXmail empty 'IP spamlist' or 'Addresses spamlist'. - (makelt, below_zero)
+improved code: in LOGIN.INC the use of a boolean variable was not formally correct. - (myslug, below_zero)
+fixed a bug: phpxmail doesn't recognize user/mailinglist correctly if the account type is in lower case - (jstuckle, below_zero)
+fixed capability to work also on that systems were in PHP.INI "short_open_tags" is "OFF" - (jstuckle, below_zero)
+fixed a bug: an user was not able to register itself if in his domain settings MaxMailBoxes=0 (unlimited) - (below_zero)
+improved regular User Login: who logs-in with a mailing list Id & Pwd now may ADD, EDIT & DELETE addresses - (csmorier, below_zero)
+fixed a bug: an extra 'carriage return' were saved in mailproc.tab file  - (csmorier, below_zero)
+added defaults for a correct environment setting (temporary they will overcome those in php.ini) - (below_zero)
+fixed a bug: on certain systems 'filterlist' page gives error or warning - (pierre-oord, below_zero)
+fixed a bug when edit, and disable, an user 'POP3 link' - (below_zero)
+
+1.4
+2005-10-16
+improved servers info: now users are noticed about wrong settings in 'CTRL account' field  - (below_zero)
+added a text file on how to install this package  - (below_zero)
+improved mailing list management: user rights are editable only when mailing list is 'Closed', enhanced interface - (below_zero)
+fixed a couple of bugs in the IP_Object class  - (below_zero)
+improved SMTP log parsing: clicking on the Sender IP will automatically add it to the local spam IP list - (below_zero)
+added control for Xmail configuration file SPAMMERS.TAB - (below_zero)
+improved SMTP log parsing: clicking on the Sender Address will automatically add it to the local spam address list - (below_zero)
+added control for Xmail configuration file SPAM-ADDRESS.TAB - (below_zero)
+fixed a series of bugs when 'register_globals' in php.ini is 'off' - (uniboee, phpn, mancini & below_zero)
+improved alias management: now the administrator can limits the max number of aliases for all users in a domain - (below_zero)
+improved 'change settings' for users: now a regular user may view/add/delete aliases for his main mailbox - (below_zero)
+improved login info: added a warning about a wrong setting of 'session.use_cookies' in PHP.INI - (pengu - below_zero)
+fixed mailbox limiting: now a visitor cannot register itself to a domain that have reached the max mailboxes limit - (below_zero)
+improved 'domain list': now quantity of users and mailing lists are splitted in two coloumns - (below_zero)
+internal rearrangement: moved two new PHPXmail misc functions from the file 'class.xmail.php' to 'class.phpxm.php' - (below_zero)
+
+1.3
+2005-08-21
+improved domain management: now the administrator can limits the max number of mailboxes for the postmaster - (below_zero)
+improved login process: if it's needed, the user is noticed that he must enable cookies before login - (below_zero)
+improved mailing list management: added a page for edit the vars of a mailinglist account - (below_zero)
+improved mailing list management: added a page for edit the user rights of a mailinglist - (below_zero)
+improved mailing list management: now is possible to set also the 'auth SMTP' in 'write' right of an user - (below_zero)
+improved log parsing: now it's possible to empty the records into the log files - (below_zero)
+improved 'mail processes' interfaces: now they use also the vertical bar | for real tabs - (below_zero)
+improved 'filter file edit': now it use also the vertical bar | for real tabs (delimiting double quotes are stripped) - (below_zero)
+improved 'file list' in 'server filters': an usage map for Pre/Post/In/Out filters is now shown - (below_zero)
+fixed 'Filter panel control': after deleting all the filters in a Pre/Post/In/Out filter, 'Count' value was 1, now is 0 - (below_zero)
+fixed security: the default value of 'Allow visitors to register a mail account' in 'phpxmail config' is now OFF - (below_zero)
+
+1.2
+2005-07-13
+fixed a authentication bypass security flaw reported by Stefan Lochbihler (mancini)
+fixed a bug when the login password is typed erroneously: PHPXmail hangs in a endless 'Denied Access' loop - (below_zero)
+improved first start-up: the initial page is the 'Add server' page, Login is permitted only after a server is added - (below_zero)
+fixed a bug when adding more than one user in a domain: the Nav-menu erroneously report him as a mailing list user - (below_zero)
+
+1.1
+2005-06-02
+Fixed empty fields submitting when adding a server: now all fields must be filled - (below_zero)
+added advanced log parsing of all the log files (selectable by date), error info & color highlighting - (below_zero)
+fixed user menu bug (mailbox name was not shown in nav-menues) - (below_zero & phpn) 
+fixed an 'Auth deny' in certain circumstances when using virtual nodes in nav. caption - (below_zero)
+improved mail processes interface (usergetmproc.inc & domainmproc.inc) now it's not required to delimit fields with " - (below_zero) 
+fixed a bug in usergetmproc.inc file (does not delete mailproc.tab when it is empty)so Xmail server loss e-mails - (below_zero)
+improved graphics of 'Server Config Variables': uniformed to 'user defaults' (see below) - (below_zero)
+improved graphics of 'User Defaults': Now variables are enabled toggling ON/OFF icons, disabled variables are grayed - (below_zero)
+fixed a bug that does not permit to setup server parameters for those users that make a clean install of ver. 1.0 - (below_zero)
+fixed Mailing List menu management (now return to 'mailboxes' instead of 'mail list' after Add or Delete an item) - (below_zero)
+fixed behaviour of to shift by one position some checkbox values when deleting a variable from Server Config Variables - (below_zero)
+
+1.0
+2005-05-16
+improved 'server filters': now when add a new IN-OUT-PRE-POST the filename is selectable from a list of existing files (below_zero)
+improved 'advanced' user menu (now called 'user mail proc'): also 'domain mail proc' are shown, if any; added shortcut (below_zero)
+improved readability of users list (now mailing list & users list are on differents pages) - (below_zero)
+improved statistics for users list of a domain (if enabled) - (below_zero)
+added setup of 'mail processes' also for domains (it is common to all users in a domain) - (below_zero)
+added mailbox default (& mailing list default) variables selection (both global or per domain) - (below_zero)
+added filters scripts file management (view, add, delete, modify) - (below_zero)
+added control for Xmail configuration file SMTP.IPMAP.TAB (global access) - (below_zero)
+added control for Xmail configuration file POP3.IPMAP.TAB (global access) - (below_zero)
+added control for Xmail configuration file POP3.IPMAP.TAB (per user basis) - (below_zero)
+added control for Xmail configuration file FINGER.IPMAP.TAB (global access) - (below_zero)
+added control for Xmail configuration file CTRL.IPMAP.TAB (global access) - (below_zero)
+added ability to force a server global POP3 synchronization (below_zero)
+added ability to show Xmail version after logged-in (below_zero)
+added info about how & when Xmail server will apply the filters (below_zero)
+improved safety in message logs: now it is in plain text (HTML tags are no more executed but shown in gray color) - (below_zero) 
+fixed empty fields of xmail variables bug in the config page (at first install of PHPXmail) - (below_zero)
+fixed characters size & alignment bug (not uniform) in frozen msgs (below_zero)
+improved details: umansized size of frozen msgs (below_zero)
+fixed server filters null update (mancini)
+
+0.9
+2005-04-13
+added check to avoid INDEX ERROR messages (below_zero)
+added filters logs and psync logs (below_zero)
+fixed phpxmail config submit bug (below_zero)
+added MaxMessageSize format and prevented user deleting empty values (below_zero)
+added config option to allow/disallow ADMIN info in login page (below_zero)
+improved humansize() function (below_zero)
+fixed and improved stats in userlist (below_zero)
+added distinct icon and handling of catch-all alias (below_zero)
+fixed updating filters without adding new one
+added ability to create crossdomain aliases (arkadi)
+
+0.8
+2005-02-05
+added logs feature
+improved graphics
+fixed filters bug
+fixed frozen messages bug
+improved frozen mesagges handling
+fixed user alias bug
+
+0.70
+2004-10-21
+fixed aliases (nick)
+servers security fix (zarf)
+added filters feature
+
+0.69
+2004-07-31
+fixed authentification bug (diggie)
+added server file creation test
+fixed useradd glitch
+added visitors registering feature
+
+0.68
+2004-04-24
+improved graphics and layouts
+added configuration script
+restricted update script
+
+0.67
+2004-04-19
+added update notice on main menu
+fixed domain password change bug
+disabled showing of user passwords
+multiple cosmetic enhancements
+
+0.66
+2004-04-13
+added icon legend feature
+fixed and improved advanced mail settings script
+fixed and improved custom domain editing script (mancini/kolatracks)
+
+0.55
+2004-04-12
+fixed some warnings about undefined variables in many scripts
+added a new version check feature
+improved old / added new icons
+improved the custom domain editing script
+
+0.44
+2004-04-07
+first version since the project switched administrators
