@@ -296,7 +296,7 @@ class MenuTree {
 function str_replace_vars($string){
 	$pattern = "[ &=\"@\t]";
 	$temp = $string;
-	$words = split($pattern, $temp);
+	$words = preg_split($pattern, $temp);
 	foreach ($words as $word) {
 		if (strchr($word, "$") == $word) {
 			global ${str_replace("\$", "", $word)};

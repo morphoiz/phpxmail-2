@@ -25,12 +25,12 @@ if (!empty($_GET)) {
 		} else {
 			$FileTypes = array();
 			foreach ($LogFiles as $SingleFile) {
-				$prefix = split('-', $SingleFile[0]);
+				$prefix = preg_split("/-/", $SingleFile[0]);
 				if (!array_key_exists($prefix[0],$FileTypes)){
 					$FileTypes[$prefix[0]] = array ('type'=>$prefix[0], 'count'=>0, 'last'=>'', 'first'=>date("YmdHi"), 'size'=>0);
 				}
 				$FileTypes[$prefix[0]]['count']++;
-				$FileTypes[$prefix[0]]['size'] += $SingleFile[1];
+				$FileTypes[$prefix[0]]['size'] += $SingleFile[1];				
 				if ($prefix[1] > $FileTypes[$prefix[0]]['last']) $FileTypes[$prefix[0]]['last'] = $prefix[1];
 				if ($prefix[1] < $FileTypes[$prefix[0]]['first']) $FileTypes[$prefix[0]]['first'] = $prefix[1];
 			}
@@ -58,8 +58,8 @@ if (!empty($_GET)) {
 		<td><a href="main.php?action=serverlog&ltype=<?php echo $row['type']; ?>&log=<?php echo $row['last']; ?>&do=view"><img src="gfx/ico_log.gif" alt="View files" border="0"> <?php echo $row['type'] ?></a></td>
 		<td><?php $TotCount += $row['count']; echo $row['count'] ?></td>
 		<td><?php $TotSize += $row['size']; echo humansize($row['size']) ?></td>
-		<td><?php ereg("([0-9]{4})([0-9]{2})([0-9]{2})([0-9]{2})([0-9]{2})", $row['last'], $last); echo "$last[1]-$last[2]-$last[3] $last[4]:$last[5]"?></td>
-		<td><?php ereg("([0-9]{4})([0-9]{2})([0-9]{2})([0-9]{2})([0-9]{2})", $row['first'], $last); echo "$last[1]-$last[2]-$last[3] $last[4]:$last[5]"?></td>
+		<td><?php preg_match("/([0-9]{4})([0-9]{2})([0-9]{2})([0-9]{2})([0-9]{2})/", $row['last'], $last); echo "$last[1]-$last[2]-$last[3] $last[4]:$last[5]"?></td>
+		<td><?php preg_match("/([0-9]{4})([0-9]{2})([0-9]{2})([0-9]{2})([0-9]{2})/", $row['first'], $last); echo "$last[1]-$last[2]-$last[3] $last[4]:$last[5]"?></td>
 	</tr>
 <?PHP } ?>
 	<tr><td colspan="5"><hr></td>	

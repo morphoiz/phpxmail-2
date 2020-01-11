@@ -109,7 +109,7 @@ if (!empty($_POST)){
 		$IP_Add = $mail_server->xm_ip;
 //		$IP_Add = '10.133.4.1';  // only for debug...
 //		$IP_Add = '218.133.4.114';  // only for debug...
-		list ($A1,$A2,$A3) = split('\.', $IP_Add);
+		list ($A1,$A2,$A3) = preg_split('\.', $IP_Add);
 		//preset a template for Intranet Class A, B or C
 		$NotIntranet=false;
 		switch ($A1){

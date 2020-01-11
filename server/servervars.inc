@@ -15,14 +15,13 @@ function PresetDynObject($Dyn_Item, $status, $varname) {
 }
 
 $msg = '';
-
 // check if form is submitted
 if (!empty($_POST)) {
 	if ((isset($_POST['save']) || isset($_POST['cmdAdd_x']))){
 		$vars = array();
 		$i=0;
 		foreach($_POST as $var=>$val) {
-			if (ereg("var_", $var)) {
+			if (preg_match("var_", $var)) {
 				if ($val != '') {
 					$var = substr($var, 4);
 					if (substr($_POST['enabled'], $i, 1) == 0) {
@@ -34,7 +33,6 @@ if (!empty($_POST)) {
 				$i++;
 			}
 		}
-
 		// check if submitted from PLUS (add) icons
 		if (isset($_POST['cmdAdd_x'])){
 			if ($_POST['xtr_var'] != '' && $_POST['xtr_value'] != ''){
@@ -49,20 +47,18 @@ if (!empty($_POST)) {
 		unset($vars);
 	}
 }
-
 $vars = array();
 
 $file = $mail_server->cfgfileget('server.tab');
 foreach ($file as $line) {
-	if (ereg('#', $line[0])) {
-		$line[0] = str_replace('"', '', substr($line[0], 1));
+	if (preg_match('#', $line[0])) {
+		$line[0] = "bla";//str_replace('"', '', substr($line[0], 1));
 		$vars[$line[0]]['enabled'] = false;
 	} else {
 		$vars[$line[0]]['enabled'] = true;
 	}
 	$vars[$line[0]]['value'] = $line[1];
 }
-
 echo $msg;
 
 ?>

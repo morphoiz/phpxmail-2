@@ -46,7 +46,7 @@ if (!empty($_POST)) {
 		$vars = array();
 		$i=0;
 		foreach($_POST as $var=>$val) {
-			if (ereg("var_", $var)) {
+			if (preg_match("var_", $var)) {
 				if ($val != '') {
 					$var = substr($var, 4);
 					if (substr($_POST['enabled'], $i, 1) == 0) {
@@ -105,7 +105,7 @@ if ($UserDefUsed) {
 	// now enable those vars stored in the file and that are uncommented
 	$file = $mail_server->cfgfileget($FileToUse);
 	foreach ($file as $line) {
-		if (ereg('#', $line[0])) {
+		if (preg_match('#', $line[0])) {
 			$line[0] = str_replace('"', '', substr($line[0], 1));
 			$vars[$line[0]]['enabled'] = false;
 		} else {

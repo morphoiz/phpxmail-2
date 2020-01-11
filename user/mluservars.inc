@@ -17,7 +17,7 @@ if (!empty($_POST)) {
 	}
 	// save user vars
 	foreach($_POST as $var=>$val) { // loop through all vars
-	if (ereg("var_", $var)) {
+	if (preg_match("var_", $var)) {
 		$var = substr($var, 4);
 		if ($val == '') $val = '.|rm'; // remove value
 		$vars .= "$var\t$val\t";

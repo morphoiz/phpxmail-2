@@ -18,7 +18,7 @@
                 }
                 // save user vars
                 foreach($_POST as $var=>$val) { // loop through all vars
-                        if (ereg("var_", $var)) {
+                        if (preg_match("var_", $var)) {
                                 $var = substr($var, 4);
                                 //if ($val == '') $val = '.|rm'; // remove value
                                 if ($val == '') $val = '??'; // user cannot remove the variable
